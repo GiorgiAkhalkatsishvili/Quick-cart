@@ -1,0 +1,131 @@
+
+.shopPage{
+  max-width: 1270px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.shopPage .shop-inner .main-heading{
+max-width: 135px;
+}
+
+.shopPage .shop-inner .main-heading h1{
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.shopPage .shop-inner .main-heading #border{
+  background-color: #ea580c;
+  width: 64px;
+  height: 3px;
+  width: 60px;
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+.shopPage .product-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 30px;
+  row-gap: 30px;
+}
+
+.shopPage .product-list .product-img {
+  background-color: #6b72801a;
+  max-height: 200px;
+  height: 100%;
+  border-radius: 12px;
+  position: relative;
+}
+
+.shopPage .product-list .product-svg svg {
+  width: 15px;
+}
+
+.shopPage .product-list .product-svg {
+  width: 30px;
+  height: 30px;
+  border: solid 1px #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.shopPage .product-list .product-item img {
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+  padding: 10px;
+  transition: .2s ease;
+}
+
+.shopPage .product-list .product-item img:hover {
+  scale: 1.1;
+}
+
+.shopPage .product-list .product-item {
+  max-width: 200px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.shopPage .product-list .product-item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1rem;
+  color: #6b7280b3;
+}
+
+.shopPage .product-list .product-item h2 {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.shopPage .product-list .price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.shopPage .product-list .price-btn p {
+  color: #000;
+  font-weight: 500;
+}
+
+.shopPage .product-list .price-btn button {
+  border: solid 1px #6b7280b3;
+  padding: 5px 12px;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #374151;
+  transition: .4s ease;
+}
+
+.shopPage .product-list .price-btn button:hover {
+  background-color: #6b72801a;
+  color: #374151;
+}
+
+@media only screen and (max-width: 1200px) {
+  .shopPage {
+    padding-left: 20px;
+  }
+
+  .shopPage .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

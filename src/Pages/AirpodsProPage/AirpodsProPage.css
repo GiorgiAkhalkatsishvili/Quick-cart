@@ -1,0 +1,146 @@
+
+.airpodsProPage{
+  max-width: 1150px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.airpodsProPage .airpodsPage-inner{
+display: flex;
+gap: 150px;
+}
+
+.airpodsPage-inner .airpods-images .main-img{
+ background-color: #6b72801a;
+border-radius: 10px;
+width: 110%;
+}
+
+.airpodsPage-inner .airpods-images .main-img img{
+width: 100%;
+mix-blend-mode: multiply;
+}
+
+.airpodsPage-inner .images-options{
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+  margin-top: 20px;
+}
+
+.airpodsPage-inner .images-options .imgOptionOne{
+ max-width: 100px;
+ background-color: #6b72801a;
+ border-radius: 10px;
+ cursor: pointer;
+}
+
+.airpodsPage-inner .images-options .imgOptionOne img{
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+.airpodsPage-inner .main-products-descreption .main-heading h1{
+  color: #1f2937e6;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 36px;
+}
+
+.airpodsPage-inner .rated-stars-svgs .filled-stars{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 25px;
+}
+
+.airpodsPage-inner .rated-stars-svgs .filled-stars p{
+  margin-left: 5px;
+  font-size: 18px;
+  color: #1f2937e6;
+  font-weight: 500;
+}
+
+.airpodsPage-inner .main-products-descreption .products-description p{
+  color: #4b5563;
+  margin-top: 12px;
+  font-weight: 430;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.airpodsPage-inner .main-products-descreption .product-price p{
+  font-size: 32px;
+  color: #1f2937e6;
+  font-weight: 500;
+  margin-top: 12px;
+  padding-bottom: 15px;
+}
+
+.airpodsPage-inner .product-type{
+  margin-top: 30px;
+}
+
+.airpodsPage-inner .product-type .typeOne{
+  display: flex;
+  max-width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.airpodsPage-inner .product-type .typeOne p{
+  font-weight: 500;
+  font-size: 20px;
+  color: #1f2937e6;
+  margin-bottom: 3px;
+}
+
+.airpodsPage-inner .product-type .typeOne span{
+  color: #4b5563;
+  font-size: 19px;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons{
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnOne{
+  width: 100%;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnTwo{
+  width: 100%;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnOne button{
+  padding: 13px 0;
+  width: 100%;
+  font-size: 19px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: solid 1px #f3f4f6;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnOne button:hover{
+background-color: #dcddde;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnTwo button{
+padding: 13px 0;
+  width: 100%;
+  font-size: 19px;
+  background-color: #ea580c;
+  color: #fff;
+  border: solid 1px #ea580c;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.airpodsPage-inner .main-products-descreption .main-products-buttons .btnTwo button:hover{
+  background-color: #c04706;
+}

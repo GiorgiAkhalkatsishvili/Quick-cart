@@ -1,0 +1,227 @@
+
+.productsComponent{
+  max-width: 1270px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.productsComponent .products-inner .main-heading h1{
+color: #374151;
+  font-weight: 500;
+  font-size: 29px;
+}
+
+.productsComponent .product-list{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+margin-top: 30px;
+row-gap: 30px;
+}
+
+.productsComponent .product-list .product-img{
+background-color: #6b72801a;
+max-height: 200px;
+height: 100%;
+border-radius: 12px;
+position: relative;
+}
+
+.productsComponent .product-list .product-svg svg{
+  width: 15px;
+}
+
+.productsComponent .product-list .product-svg{
+width: 30px;
+height: 30px;
+  border: solid 1px #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.productsComponent .product-list .product-item img{
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+  padding: 10px;
+  transition: .2s ease;
+}
+
+.productsComponent .product-list .product-item img:hover {
+  scale: 1.1;
+}
+
+.productsComponent .product-list .product-item{
+  max-width: 200px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.productsComponent .product-list .product-item p{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  line-height: 1rem;
+  color: #6b7280b3;
+}
+
+.productsComponent .product-list .product-item h2{
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.products-inner .product-list .price-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.products-inner .product-list .price-btn p{
+  color: #000;
+  font-weight: 500;
+}
+
+.products-inner .product-list .price-btn button{
+  border: solid 1px #6b7280b3;
+  padding: 5px 12px;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+color: #374151;
+transition: .4s ease;
+}
+
+.products-inner .product-list .price-btn button:hover{
+  background-color: #6b72801a;
+  color: #374151;
+}
+
+.productsComponent .products-final-btn{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.productsComponent .products-final-btn button{
+padding: 9px 38px;
+font-size: 18px;
+color: #6b7280b3;
+background-color: #fff;
+border: solid 1px #6b7280b3;
+border-radius: 4px;
+cursor: pointer;
+transition: .4s ease;
+}
+
+.productsComponent .products-final-btn button:hover{
+  background-color: #6b7280b3;
+  color: #fff;
+  border: solid 1px #6b7280b3;
+}
+
+@media only screen and (max-width: 1200px){
+  .productsComponent{
+   padding-left: 20px;
+  }
+
+  .productsComponent .product-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .productsComponent{
+    display: flex;
+    justify-content: center;
+  }
+.productsComponent .product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  }
+}
+
+@media only screen and (max-width: 785px){
+.productsComponent{
+padding-left: 20px;
+  padding-right: 20px;
+}
+
+.productsComponent .product-list{
+  grid-template-columns: 1fr 1fr;
+}
+
+.productsComponent .product-list .product-item{
+max-width: 250px;
+width: 100%;
+}
+
+.productsComponent .product-list .product-item img{
+  max-height: 250px;
+  height: 100vh;
+  width: 100%;
+}
+
+.productsComponent .product-list .product-img{
+  max-height: 250px;
+  height: 100vh;
+  width: 100%;
+}
+}
+
+@media only screen and (max-width: 605px){
+.productsComponent .product-list .product-item {
+    max-width: 190px;
+    width: 100%;
+  }
+
+.productsComponent .product-list .product-item img {
+      max-height: 190px;
+      height: 100vh;
+      width: 100%;
+    }
+
+  .productsComponent .product-list .product-img {
+    max-height: 190px;
+    height: 100vh;
+    width: 100%;
+  }
+
+.productsComponent .product-list {
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+.productsComponent .product-list .product-item {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .productsComponent .product-list .product-item img {
+    max-height: 150px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .productsComponent .product-list .product-img {
+    max-height: 150px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .productsComponent .product-list {
+    gap: 30px;
+  }
+}

@@ -1,0 +1,188 @@
+.mainBannerComponent {
+  max-width: 1270px;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.mainBannerComponent .main-slider-inner {
+  border: solid 1px #e6e9f2;
+  background-color: #e6e9f2;
+  border-radius: 12px;
+  height: auto;
+  padding-left: 60px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.main-slider-inner .slide-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.main-slider-inner .slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-slider-inner .first-banner-heading p {
+  color: #ea580c;
+  font-size: 21px;
+}
+
+.main-slider-inner .main-heading h1 {
+  max-width: 500px;
+  width: 100%;
+  font-size: 50px;
+  line-height: 55px;
+  margin-top: 20px;
+  color: #374151;
+}
+
+.main-slider-inner .main-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.main-slider-inner .main-btns .btnOne button {
+  font-size: 21px;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: solid 1px #ea580c;
+  color: #fff;
+  background-color: #ea580c;
+  cursor: pointer;
+}
+
+.main-slider-inner .main-btns .btnTwo a{
+  text-decoration: none;
+}
+
+.main-slider-inner .main-btns .btnTwo button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 21px;
+  padding: 10px 40px;
+  border: none;
+  background-color: #e6e9f2;
+  cursor: pointer;
+}
+
+.mainBannerComponent .main-slider-inner .main-btns svg {
+  width: 20px;
+}
+
+.main-slider-inner .main-banner-img img {
+  max-width: 320px;
+  width: 100%;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-dots .dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #e6e9f2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  background-color: #ea580c;
+}
+
+.slider-dots .dot:hover {
+  background-color: #fda500;
+}
+
+@media only screen and (max-width: 1200px){
+  .mainBannerComponent .main-slider-inner{
+    margin: 0 20px;
+  }
+  .main-slider-inner .slide{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .main-slider-inner .main-heading h1{
+    font-size: 40px;
+  }
+
+  .main-slider-inner .main-banner-img img{
+    width: 280px;
+    padding-right: 1px;
+  }
+}
+
+@media only screen and (max-width: 950px){
+.mainBannerComponent .main-slider-inner{
+padding-top: 10px;
+padding-bottom: 30px;
+display: block;
+  }
+
+.mainBannerComponent .slide{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mainBannerComponent .slide .inner-texts{
+  text-align: center;
+}
+
+.main-slider-inner .main-banner-img img{
+  margin-right: 0;
+}
+
+.main-slider-inner .main-btns{
+  justify-content: center;
+}
+}
+
+@media only screen and (max-width: 785px){
+.main-slider-inner .main-heading h1{
+  font-size: 35px;
+}
+
+
+.main-slider-inner .main-banner-img img{
+  width: 200px;
+}
+
+.main-slider-inner .main-btns .btnOne button{
+  padding: 10px 30px;
+}
+
+.main-slider-inner .main-btns .btnTwo button{
+  padding: 10px 30px;
+}
+.mainBannerComponent .main-slider-inner{
+  padding-left: 0;
+}
+
+.mainBannerComponent .inner-texts .main-heading h1{
+font-size: 30px;
+padding-left: 10px;
+padding-right: 10px;
+}
+}

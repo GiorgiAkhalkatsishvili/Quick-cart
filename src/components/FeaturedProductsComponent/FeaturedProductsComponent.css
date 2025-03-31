@@ -1,0 +1,192 @@
+
+.featuredProductsComponent{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.featuredProductsComponent .inner .main-heading{
+  margin-bottom: 30px;
+}
+
+.featuredProductsComponent .inner .main-heading hr{
+  border: solid 1.6px #ea580c;
+  width: 112px;
+  margin: auto;
+}
+
+.featuredProductsComponent .inner .main-heading h1{
+  color: #374151;
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.featuredProductsComponent .banners-container{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.featuredProductsComponent .banners-container .banner-one{
+  position: relative;
+}
+
+.featuredProductsComponent .banners-container .banner-one .banner-img-texts img{
+  max-width: 360px;
+  width: 100%;
+  transition: .4s ease;
+}
+
+.featuredProductsComponent .banners-container .banner-one img:hover{
+filter: brightness(0.7);
+}
+
+.banners-container .banner-one .banner-img-texts .banner-texts{
+position: absolute;
+bottom: 50px;
+left: 50px;
+color: #fff;
+}
+
+.banners-container .banner-one .banner-img-texts h3{
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.banners-container .banner-one .banner-img-texts p{
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 50px;
+  margin-bottom: 10px;
+}
+
+.banners-container .banner-one .banner-img-texts button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #ea580c;
+  color: #fff;
+  font-size: 17px;
+  border: solid 1px #ea580c;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.featuredProductsComponent .bottom-banner{
+  max-width: 1270px;
+  width: 100%;
+}
+
+
+.featuredProductsComponent .bottom-banner .inner-banner{
+  border: solid 1px #e6e9f2;
+  background-color: #e6e9f2;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-banner .main-banner-headings{
+  text-align: center;
+  max-width: 320px;
+}
+
+.inner-banner .main-banner-headings h1{
+  font-size: 40px;
+  line-height: 36px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.inner-banner .main-banner-headings p{
+  color: #1f293799;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inner-banner .main-banner-headings button{
+padding: 10px 45px;
+font-size: 19px;
+background-color: #ea580c;
+border: solid 1px #ea580c;
+color: #fff;
+border-radius: 4px;
+margin: auto;
+margin-top: 15px;
+cursor: pointer;
+display: flex;
+gap: 15px;
+}
+
+
+.inner-banner .main-banner-headings button svg{
+  width: 15px;
+}
+
+.featuredProductsComponent .inner-banner .imageOne{
+  padding-left: 60px;
+}
+
+.featuredProductsComponent .inner-banner .imageOne img{
+  max-width: 210px;
+   width: 100%;
+}
+
+.featuredProductsComponent .inner-banner .imageTwo img{
+  max-width: 310px;
+   width: 100%;
+}
+
+.featuredProductsComponent .imageThree{
+  display: none;
+}
+
+@media only screen and (max-width: 1200px){
+  .featuredProductsComponent{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .featuredProductsComponent .banners-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 785px){
+  .featuredProductsComponent .inner-banner{
+    flex-direction: column;
+  }
+
+  .featuredProductsComponent .inner-banner .imageTwo{
+display: none;
+  }
+
+.featuredProductsComponent .imageThree {
+      display: flex;
+    }
+
+  .featuredProductsComponent .inner-banner .imageThree img{
+    max-width: 722px;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 605px){
+.featuredProductsComponent .banners-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
