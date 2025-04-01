@@ -123,7 +123,7 @@
   background-color: #fff;
   color: #000;
   top: 65px;
-  right: 140px;
+  right: 165px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px 0px, rgba(25, 28, 33, 0.2) 0px 15px 35px -5px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
   border-radius: 8px;
   z-index: 999;
@@ -292,11 +292,11 @@ background-color: #6b72801a;
   justify-content: end;
   padding-right: 10px;
   right: 160px;
-  position: absolute;
 }
 
 .headerComponent .menu-container .burger-menu{
   width: 21px;
+  height: 21px;
   cursor: pointer;
   display: none;
 }
@@ -304,6 +304,9 @@ background-color: #6b72801a;
 @media only screen and (max-width: 1200px){
   .headerComponent .header-inner{
     padding: 20px 80px 15px 80px;
+  }
+  .headerComponent .dropdown-menu{
+    right: 118px;
   }
 }
 
@@ -325,4 +328,15 @@ display: block;
   .headerComponent .menu-container{
 right: 120px;
     }
+  .headerComponent .dropdown-menu {
+      right: 76px;
+      left: 76px;
+    }
+.headerComponent .dropdown-menu .user-dropDown-name-gmail p{
+  font-size: 15px;
+}
+
+.header-inner .main-header-icons .account-svg{
+  align-items: center;
+}
 }

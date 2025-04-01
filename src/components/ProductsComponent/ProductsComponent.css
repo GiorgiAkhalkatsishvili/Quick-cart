@@ -199,8 +199,9 @@ width: 100%;
   }
 
 .productsComponent .product-list {
-    gap: 30px;
+    gap: 20px;
   }
+
 }
 
 @media only screen and (max-width: 425px){
@@ -210,8 +211,7 @@ width: 100%;
   }
 
   .productsComponent .product-list .product-item img {
-    max-height: 150px;
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
 
@@ -222,6 +222,6 @@ width: 100%;
   }
 
   .productsComponent .product-list {
-    gap: 30px;
+    gap: 20px;
   }
 }

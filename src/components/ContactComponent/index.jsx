@@ -11,7 +11,7 @@ const ContactComponent = () => {
         </div>
         <div className="main-input">
           <input type="text" placeholder='Type a message and send'/>
-          <button>Send message</button>
+          <button>Send</button>
         </div>
       </div>
     </div>

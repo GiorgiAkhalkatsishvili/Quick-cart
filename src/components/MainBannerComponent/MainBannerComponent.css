@@ -170,11 +170,13 @@ display: block;
 }
 
 .main-slider-inner .main-btns .btnOne button{
-  padding: 10px 30px;
+  padding: 10px 20px;
+  font-size: 17px;
 }
 
 .main-slider-inner .main-btns .btnTwo button{
-  padding: 10px 30px;
+  padding: 10px 20px;
+  font-size: 17px;
 }
 .mainBannerComponent .main-slider-inner{
   padding-left: 0;

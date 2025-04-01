@@ -189,4 +189,7 @@ display: none;
     display: grid;
     grid-template-columns: 1fr;
   }
+  .featuredProductsComponent .inner-banner .imageOne{
+padding-left: 0;
+    }
 }
