@@ -328,10 +328,11 @@ display: block;
   .headerComponent .menu-container{
 right: 120px;
     }
+
   .headerComponent .dropdown-menu {
       right: 76px;
-      left: 76px;
     }
+    
 .headerComponent .dropdown-menu .user-dropDown-name-gmail p{
   font-size: 15px;
 }
@@ -339,4 +340,11 @@ right: 120px;
 .header-inner .main-header-icons .account-svg{
   align-items: center;
 }
+}
+
+@media only screen and (max-width: 425px){
+.headerComponent .dropdown-menu {
+    right: 76px;
+    left: 20px;
+  }
 }

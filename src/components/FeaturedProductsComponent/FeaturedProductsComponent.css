@@ -13,6 +13,7 @@
 
 .featuredProductsComponent .inner .main-heading hr{
   border: solid 1.6px #ea580c;
+  background-color: #ea580c;
   width: 112px;
   margin: auto;
 }
@@ -124,6 +125,7 @@ margin: auto;
 margin-top: 15px;
 cursor: pointer;
 display: flex;
+align-items: center;
 gap: 15px;
 }
 
