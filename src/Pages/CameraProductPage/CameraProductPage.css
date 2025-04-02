@@ -149,3 +149,58 @@
 .cameraPage-inner .main-products-descreption .main-products-buttons .btnTwo button:hover {
   background-color: #c04706;
 } 
+
+@media only screen and (max-width: 1200px) {
+  .cameraPage {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .cameraPage .cameraPage-inner {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .cameraPage .main-img {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .cameraPage .main-img img {
+    width: 100%;
+  }
+
+  .cameraPage-inner .images-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .cameraPage .cameraPage-inner {
+    gap: 50px;
+  }
+
+  .cameraPage-inner .main-products-descreption .main-heading h1 {
+    font-size: 25px;
+  }
+
+  .cameraPage-inner .main-products-descreption .products-description p {
+    font-size: 16px;
+  }
+
+  .cameraPage-inner .main-products-descreption .product-price p {
+    font-size: 25px;
+  }
+
+  .cameraPage-inner .product-type .typeOne p {
+    font-size: 18px;
+  }
+
+  .cameraPage-inner .product-type .typeOne span {
+    font-size: 17px;
+  }
+}

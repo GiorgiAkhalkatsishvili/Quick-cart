@@ -11,17 +11,17 @@ const HeaderComponent = () => {
   const [user, setUser] = useState(null); // Store user info (for image and name)
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const sidebarMenuRef = useRef();
 
 
   const openMenu = () => {
-    sidebarMenuRef.current.style.transform = 'translateX(0rem)'
-  }
+    setSidebar(true);
+  };
 
   const closeMenu = () => {
-    sidebarMenuRef.current.style.transform = 'translateX(50rem)'
-  }
+    setSidebar(false);
+  };
 
 
   const toggleSidebar = () => {
@@ -82,21 +82,28 @@ const HeaderComponent = () => {
             <Link to='/about'><li>Contact</li></Link>
           </ul>
         </div>
-        {sidebar && (
-          <div ref={sidebarMenuRef} className="sidebar-menu">
+         <div
+          ref={sidebarMenuRef}
+          className="sidebar-menu"
+          style={{
+            transform: sidebar ? 'translateX(0rem)' : 'translateX(50rem)',
+            transition: 'transform 0.3s ease-in-out',
+          }}
+        >
           <div className="sidebar-list">
             <div className="closing-svg">
-              <svg onClick={closeMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" fill='#374151'/></svg>
+              <svg onClick={closeMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" fill='#374151'/>
+              </svg>
             </div>
             <ul>
-            <Link onClick={closeMenu} to='/'><li>Home</li></Link>
-            <Link onClick={closeMenu} to='/allProducts'><li>Shop</li></Link>
-            <Link onClick={closeMenu} to='/about'><li>About us</li></Link>
-            <Link onClick={closeMenu} to='/about'><li>Contact</li></Link>
+              <Link onClick={closeMenu} to='/'><li>Home</li></Link>
+              <Link onClick={closeMenu} to='/allProducts'><li>Shop</li></Link>
+              <Link onClick={closeMenu} to='/about'><li>About us</li></Link>
+              <Link onClick={closeMenu} to='/about'><li>Contact</li></Link>
             </ul>
           </div>
         </div>
-        )}
         <div className="main-header-icons">
           <div className="main-search-icon">
             <img src={searchIcon} alt="Search" />

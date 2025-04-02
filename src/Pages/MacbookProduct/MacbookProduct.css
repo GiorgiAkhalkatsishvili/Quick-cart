@@ -151,3 +151,58 @@
 .macBookPage-inner .main-products-descreption .main-products-buttons .btnTwo button:hover {
   background-color: #c04706;
 }
+
+@media only screen and (max-width: 1200px) {
+  .macBookPage {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .macBookPage .macBookPage-inner {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .macBookPage .main-img {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .macBookPage .main-img img {
+    width: 100%;
+  }
+
+  .macBookPage-inner .images-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .macBookPage .macBookPage-inner {
+    gap: 50px;
+  }
+
+  .macBookPage-inner .main-products-descreption .main-heading h1 {
+    font-size: 25px;
+  }
+
+  .macBookPage-inner .main-products-descreption .products-description p {
+    font-size: 16px;
+  }
+
+  .macBookPage-inner .main-products-descreption .product-price p {
+    font-size: 25px;
+  }
+
+  .macBookPage-inner .product-type .typeOne p {
+    font-size: 18px;
+  }
+
+  .macBookPage-inner .product-type .typeOne span {
+    font-size: 17px;
+  }
+}

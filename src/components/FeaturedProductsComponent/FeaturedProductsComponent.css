@@ -194,4 +194,8 @@ display: none;
   .featuredProductsComponent .inner-banner .imageOne{
 padding-left: 0;
     }
+
+  .featuredProductsComponent .main-banner-headings{
+   padding: 0 5px;
+  }
 }

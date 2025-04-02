@@ -151,3 +151,58 @@
 .asusLaptopPage-inner .main-products-descreption .main-products-buttons .btnTwo button:hover {
   background-color: #c04706;
 }
+
+@media only screen and (max-width: 1200px) {
+  .asusLaptopPage {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .asusLaptopPage .asusLaptopPage-inner {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .asusLaptopPage .main-img {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .asusLaptopPage .main-img img {
+    width: 100%;
+  }
+
+  .asusLaptopPage-inner .images-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .asusLaptopPage .asusLaptopPage-inner {
+    gap: 50px;
+  }
+
+  .asusLaptopPage-inner .main-products-descreption .main-heading h1 {
+    font-size: 25px;
+  }
+
+  .asusLaptopPage-inner .main-products-descreption .products-description p {
+    font-size: 16px;
+  }
+
+  .asusLaptopPage-inner .main-products-descreption .product-price p {
+    font-size: 25px;
+  }
+
+  .asusLaptopPage-inner .product-type .typeOne p {
+    font-size: 18px;
+  }
+
+  .asusLaptopPage-inner .product-type .typeOne span {
+    font-size: 17px;
+  }
+}

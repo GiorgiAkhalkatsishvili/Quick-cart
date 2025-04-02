@@ -151,3 +151,58 @@
 .playStationPage-inner .main-products-descreption .main-products-buttons .btnTwo button:hover {
   background-color: #c04706;
 }
+
+@media only screen and (max-width: 1200px) {
+  .playStationPage {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .playStationPage .playStationPage-inner {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .playStationPage .main-img {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .playStationPage .main-img img {
+    width: 100%;
+  }
+
+  .playStationPage-inner .images-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .playStationPage .playStationPage-inner {
+    gap: 50px;
+  }
+
+  .playStationPage-inner .main-products-descreption .main-heading h1 {
+    font-size: 25px;
+  }
+
+  .playStationPage-inner .main-products-descreption .products-description p {
+    font-size: 16px;
+  }
+
+  .playStationPage-inner .main-products-descreption .product-price p {
+    font-size: 25px;
+  }
+
+  .playStationPage-inner .product-type .typeOne p {
+    font-size: 18px;
+  }
+
+  .playStationPage-inner .product-type .typeOne span {
+    font-size: 17px;
+  }
+}

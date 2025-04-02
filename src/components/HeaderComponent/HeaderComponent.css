@@ -159,6 +159,10 @@ text-decoration: none;
   padding-left: 15px;
     padding-top: 10px;
     padding-right: 40px;
+  overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    max-width: 255px;
 }
 
 .headerComponent .dropdown-menu .user-email-paragraph p{
