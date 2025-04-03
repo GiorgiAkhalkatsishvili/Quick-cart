@@ -123,11 +123,22 @@ const productsSlice = createSlice({
         color: 'Multi',
         category: 'Laptop'
       },
-    ]
+    ],
+    cartItems: [],
+    createAccount: false,
   },
   reducers: {
-    
+    addToCartItems: (state, action) => {
+      const exists = state.cartItems.some(item => item.id === action.payload.id);
+      if (!exists) {
+        state.cartItems.push({ ...action.payload, quantity: 1 });
+      }
+    },
+  createAccount: (state) => {
+      state.createAccount = true;
+    },
   },
 })
 
+export const { addToCartItems, createAccount} = productsSlice.actions;
 export default productsSlice.reducer;

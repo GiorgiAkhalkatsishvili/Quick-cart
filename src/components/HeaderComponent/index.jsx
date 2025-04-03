@@ -5,6 +5,8 @@ import searchIcon from '../../assets/search-icon.svg';
 import { Link } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
+import { useDispatch } from 'react-redux';
+import { createAccount } from '../../Redux/productsSlice';
 
 const HeaderComponent = () => {
   const [signInTab, setSignInTab] = useState(false);
@@ -13,6 +15,7 @@ const HeaderComponent = () => {
   const dropdownRef = useRef(null);
   const [sidebar, setSidebar] = useState(false);
   const sidebarMenuRef = useRef();
+  const dispatch = useDispatch();
 
 
   const openMenu = () => {
@@ -23,10 +26,6 @@ const HeaderComponent = () => {
     setSidebar(false);
   };
 
-
-  const toggleSidebar = () => {
-    setSidebar(!sidebar);
-  }
 
 
    const toggleDropdown = () => {
@@ -48,7 +47,15 @@ const HeaderComponent = () => {
    setUser(userInfo);
    setSignInTab(false);
    setDropdownOpen(false);
+   dispatch(createAccount(true));
   };
+
+
+  const handleGoogleLoginSuccess = (credentialResponse) => {
+  handleLoginSuccess(credentialResponse);
+  dispatch(createAccount());
+};
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -166,7 +173,7 @@ const HeaderComponent = () => {
             </div>
             <div className="main-sing-in-button">
               <GoogleLogin
-                onSuccess={handleLoginSuccess}
+                onSuccess={handleGoogleLoginSuccess}
                 onError={() => console.log("Login Failed")}
                 clientId="625187534633-hmgbdet5cvb7h1qcvduuvsdhelmjcm8t.apps.googleusercontent.com"
               />

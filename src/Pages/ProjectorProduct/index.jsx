@@ -2,16 +2,39 @@ import React, { useState } from 'react';
 import './ProjectorProduct.css'
 import projectorImg from '../../assets/projector.webp'
 import { useDispatch, useSelector } from 'react-redux';
+import checkMark from '../../assets/checkMark.png';
+import { addToCartItems } from '../../Redux/productsSlice';
+
 
 const AirpodsProPage = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
   const eightProduct = products[7];
+  const accountCreated = useSelector((state) => state.products.createAccount);
+  const [message, setMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  const [error, setError] = useState('');
   const [mainImage, setMainImage] = useState(projectorImg);
   const handleThumbnailClick = (image) => {
     setMainImage(image);
   };
 
+const addProductToCart = () => {
+      if (!accountCreated) {
+    setError('You need to log in first!');
+        setShowPopup(true);
+    setTimeout(() => {
+  setShowPopup(false);
+       }, 2500);
+      } else {
+   setMessage('Item added to cart!');
+      dispatch(addToCartItems(eightProduct));
+    setShowPopup(true);
+    setTimeout(() => {
+   setShowPopup(false);
+    }, 2500);
+      }
+  };
 
   return (
     <div className='projectorPage'>
@@ -73,7 +96,7 @@ const AirpodsProPage = () => {
           </div>
           <div className="main-products-buttons">
             <div className="btnOne">
-              <button>Add to Cart</button>
+              <button onClick={addProductToCart}>Add to Cart</button>
             </div>
             <div className="btnTwo">
               <button>Buy Now</button>
@@ -81,6 +104,21 @@ const AirpodsProPage = () => {
           </div>
         </div>
       </div>
+  {
+      message ? (
+        <div className="notification">
+            <div className={`popup ${showPopup ? 'open-popup' : ''}`}>
+              <img src={checkMark} alt="" />
+              <h2>Item added to cart!</h2>
+          </div>
+        </div>
+        ) : (
+            <div className={`error ${showPopup ? 'open-error' : ''}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" fill='red'/></svg>
+              <h2>You need to log in first!</h2>
+          </div>
+        )
+      }
     </div>
   )
 }

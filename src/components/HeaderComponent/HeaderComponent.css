@@ -159,10 +159,6 @@ text-decoration: none;
   padding-left: 15px;
     padding-top: 10px;
     padding-right: 40px;
-  overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    max-width: 255px;
 }
 
 .headerComponent .dropdown-menu .user-email-paragraph p{
@@ -351,4 +347,23 @@ right: 120px;
     right: 76px;
     left: 20px;
   }
+.headerComponent .dropdown-menu .drop-down-img-texts p{
+    overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 200px;
+}
+
+.headerComponent .dropdown-menu .user-dropDown-name-gmail p{
+overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.headerComponent .dropdown-menu .user-email-paragraph p{
+    overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 200px;
+}
 }

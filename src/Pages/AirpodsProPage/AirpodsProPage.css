@@ -145,6 +145,82 @@ padding: 13px 0;
   background-color: #c04706;
 }
 
+.airpodsProPage .popup{
+background-color: #fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -30%) scale(1);
+  text-align: center;
+  padding: 0 15px 15px;
+  color: #333;
+  visibility: hidden;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.airpodsProPage .open-popup{
+  visibility: visible;
+  top: 13%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.airpodsProPage .popup h2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.airpodsProPage .popup img{
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.airpodsProPage .error{
+  background-color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -30%) scale(1);
+    text-align: center;
+    padding: 0 15px 15px;
+    color: #333;
+    visibility: hidden;
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.airpodsProPage .open-error {
+  visibility: visible;
+  top: 13%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.airpodsProPage .error h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.airpodsProPage .error svg {
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
 @media only screen and (max-width: 1200px){
   .airpodsProPage{
     padding: 0 20px;
