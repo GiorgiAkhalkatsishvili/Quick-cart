@@ -137,8 +137,11 @@ const productsSlice = createSlice({
   createAccount: (state) => {
       state.createAccount = true;
     },
+    removeProduct: (state, action) => {
+    state.cartItems = state.cartItems.filter(item=>item.id !== action.payload)
+  }
   },
 })
 
-export const { addToCartItems, createAccount} = productsSlice.actions;
+export const { addToCartItems, createAccount, removeProduct} = productsSlice.actions;
 export default productsSlice.reducer;

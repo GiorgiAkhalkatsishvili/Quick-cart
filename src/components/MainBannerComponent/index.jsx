@@ -3,34 +3,38 @@ import './MainBannerComponent.css';
 import headPhoneImg from '../../assets/header_headphone.webp';
 import playstationImg from '../../assets/playstation.webp'
 import laptopImg from '../../assets/laptop.webp'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-const slides = [
+const MainBannerComponent = () => {
+  const navigate = useNavigate();
+
+  const slides = [
   {
     id: 1,
     heading: "Experience Pure Sound - Your Perfect Headphones Awaits!",
     offer: "Limited Time Offer 30% Off",
     image: headPhoneImg,
-    buttonText: "Buy Now"
+    buttonText: "Buy Now",
+    link: '/quietHeadPhones45',
   },
   {
     id: 2,
     heading: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
     offer: "Free Shipping on All Orders",
     image: playstationImg,
-    buttonText: "Shop Now"
+    buttonText: "Shop Now",
+    link: '/playStation5'
   },
   {
     id: 3,
     heading: "Unleash Your Power - Premium Headphones for Every Beat",
     offer: "Exclusive Deals on New Models",
     image: laptopImg,
-    buttonText: "Explore Now"
+    buttonText: "Explore Now",
+    link: '/macBookPro16'
   },
 ];
-
-const MainBannerComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -43,6 +47,11 @@ const MainBannerComponent = () => {
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
+  };
+
+  const handleButtonClick = (link) => {
+    // Navigate to the link when the button is clicked
+    navigate(link);
   };
 
   return (
@@ -60,7 +69,7 @@ const MainBannerComponent = () => {
                 </div>
                 <div className="main-btns">
                   <div className="btnOne">
-                    <Link to='/allProducts'><button>{slide.buttonText}</button></Link>
+             <button onClick={()=>handleButtonClick(slide.link)}>{slide.buttonText}</button>
                   </div>
                   <div className="btnTwo">
                     <Link to='/allProducts'>

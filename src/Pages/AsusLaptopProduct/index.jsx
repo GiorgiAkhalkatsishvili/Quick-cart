@@ -4,6 +4,7 @@ import asusLaptopImg from '../../assets/asusLaptop.webp'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCartItems } from '../../Redux/productsSlice';
 import checkMark from '../../assets/checkMark.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const AirpodsProPage = () => {
@@ -15,7 +16,7 @@ const AirpodsProPage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [error, setError] = useState('');
   const [mainImage, setMainImage] = useState(asusLaptopImg);
-
+  const navigate = useNavigate();
   
   const handleThumbnailClick = (image) => {
     setMainImage(image);
@@ -36,7 +37,27 @@ const AirpodsProPage = () => {
         setShowPopup(false);
       }, 2500);
       }
-    };
+  };
+
+  const buyProduct = () => {
+      if (!accountCreated) {
+        setError('You need to log in first!');
+        setShowPopup(true);
+        setTimeout(() => {
+        setShowPopup(false);
+      }, 2500);
+      } else {
+        setMessage('Item added to cart!');
+        dispatch(addToCartItems(FifvthProduct));
+        setShowPopup(true);
+       setTimeout(() => {
+        setShowPopup(false);
+       }, 2500);
+        navigate('/cartPage');
+      }
+  };
+  
+  
 
   return (
     <div className='asusLaptopPage'>
@@ -101,7 +122,7 @@ const AirpodsProPage = () => {
               <button onClick={addProductToCart}>Add to Cart</button>
             </div>
             <div className="btnTwo">
-              <button>Buy Now</button>
+              <button onClick={buyProduct}>Buy Now</button>
             </div>
           </div>
         </div>

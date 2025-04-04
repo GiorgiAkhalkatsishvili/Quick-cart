@@ -23,7 +23,7 @@
   color: #1f293799;
 }
 
-.contactComponent .main-input{
+.contactComponent .main-input form{
   display: flex;
   margin-top: 30px;
   justify-content: center;

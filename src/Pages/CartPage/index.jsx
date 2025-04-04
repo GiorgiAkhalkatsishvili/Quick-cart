@@ -1,10 +1,16 @@
 import React from 'react'
 import './CartPage.css';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeProduct } from '../../Redux/productsSlice';
 
 const CartPage = () => {
   const cartItems = useSelector((state) => state.products.cartItems);
+  const dispatch = useDispatch();
+
+  const handleRemoveProduct = (id) => {
+    dispatch(removeProduct(id));
+  }
 
 
   return (
@@ -12,7 +18,7 @@ const CartPage = () => {
       <div className="cartPage-inner">
         <div className="main-headings">
           <h1>Your <span>Cart</span></h1>
-          <h2>Items</h2>
+          <h2>{cartItems.length} Items</h2>
         </div>
         <hr />
         <div className="product-details">
@@ -26,9 +32,15 @@ const CartPage = () => {
         <div className="displayedProducts">
             {cartItems.map((item, index) => (
             <ul className='eachProduct' key={index}>
-                <div className="proudct-img">
-                  <li><img src={item.img} alt={item.name} /></li>
-              </div>
+                <div className="product-img-texts">
+                  <div className="proudct-img">
+              <li><img src={item.img} alt={item.name} /></li>
+                  </div>
+                  <div className="image-heading">
+                    <h4>{item.name}</h4>
+                    <p onClick={()=>handleRemoveProduct(item.id)}>Remove</p>
+                  </div>
+                </div>
                 <div className="displayed-product-details">
                 <li>{item.price}</li>
               <li>{item.quantity}</li>

@@ -4,6 +4,7 @@ import projectorImg from '../../assets/projector.webp'
 import { useDispatch, useSelector } from 'react-redux';
 import checkMark from '../../assets/checkMark.png';
 import { addToCartItems } from '../../Redux/productsSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 const AirpodsProPage = () => {
@@ -15,6 +16,9 @@ const AirpodsProPage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [error, setError] = useState('');
   const [mainImage, setMainImage] = useState(projectorImg);
+  const navigate = useNavigate();
+  
+
   const handleThumbnailClick = (image) => {
     setMainImage(image);
   };
@@ -33,6 +37,24 @@ const addProductToCart = () => {
     setTimeout(() => {
    setShowPopup(false);
     }, 2500);
+      }
+  };
+
+const buyProduct = () => {
+      if (!accountCreated) {
+    setError('You need to log in first!');
+        setShowPopup(true);
+    setTimeout(() => {
+  setShowPopup(false);
+       }, 2500);
+      } else {
+   setMessage('Item added to cart!');
+      dispatch(addToCartItems(eightProduct));
+    setShowPopup(true);
+    setTimeout(() => {
+   setShowPopup(false);
+    }, 2500);
+    navigate('/cartPage')
       }
   };
 
@@ -99,7 +121,7 @@ const addProductToCart = () => {
               <button onClick={addProductToCart}>Add to Cart</button>
             </div>
             <div className="btnTwo">
-              <button>Buy Now</button>
+              <button onClick={buyProduct}>Buy Now</button>
             </div>
           </div>
         </div>
