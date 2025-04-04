@@ -1,6 +1,7 @@
 import React from 'react'
 import './FooterComponent.css';
 import mainTitle from '../../assets/main-logo.svg'
+import { Link } from 'react-router-dom';
 
 const FooterComponent = () => {
   return (
@@ -17,10 +18,10 @@ const FooterComponent = () => {
         <div className="footer-list-one">
           <p>Company</p>
           <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contact us</li>
-            <li>Privacy policy</li>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/'><li>About us</li></Link>
+            <Link to='/'><li>Contact us</li></Link>
+            <Link to='/'><li>Privacy policy</li></Link>
           </ul>
         </div>
         <div className="footer-list-two">

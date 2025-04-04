@@ -255,6 +255,34 @@
     justify-content: center;
     width: 100%;
   }
+
+.sonyAirpodsPage .error {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.sonyAirpodsPage .error h2 {
+  font-size: 16px;
+}
+
+.sonyAirpodsPage .error svg {
+  width: 20px;
+}
+
+.sonyAirpodsPage .popup {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.sonyAirpodsPage .popup h2 {
+  font-size: 16px;
+}
+
+.sonyAirpodsPage .popup img {
+  width: 20px;
+}
 }
 
 @media only screen and (max-width: 425px) {

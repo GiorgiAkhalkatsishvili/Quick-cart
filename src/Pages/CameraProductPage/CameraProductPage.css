@@ -253,6 +253,34 @@
     justify-content: center;
     width: 100%;
   }
+
+.cameraPage .error {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.cameraPage .error h2 {
+  font-size: 16px;
+}
+
+.cameraPage .error svg {
+  width: 20px;
+}
+
+.cameraPage .popup {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.cameraPage .popup h2 {
+  font-size: 16px;
+}
+
+.cameraPage .popup img {
+  width: 20px;
+}
 }
 
 @media only screen and (max-width: 425px) {

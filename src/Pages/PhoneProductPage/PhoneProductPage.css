@@ -253,6 +253,34 @@
     justify-content: center;
     width: 100%;
   }
+
+.iphonePage .error {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.iphonePage .error h2 {
+  font-size: 16px;
+}
+
+.iphonePage .error svg {
+  width: 20px;
+}
+
+.iphonePage .popup {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.iphonePage .popup h2 {
+  font-size: 16px;
+}
+
+.iphonePage .popup img {
+  width: 20px;
+}
 }
 
 @media only screen and (max-width: 425px) {

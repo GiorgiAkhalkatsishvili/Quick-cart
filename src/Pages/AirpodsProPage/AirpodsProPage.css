@@ -248,6 +248,31 @@ background-color: #fff;
     justify-content: center;
     width: 100%;
   }
+  
+.airpodsProPage .error{
+gap: 10px;
+padding: 0px 10px 10px;
+width: 210px;
+  }
+
+.airpodsProPage .error h2{
+  font-size: 16px;
+}
+.airpodsProPage .error svg{
+  width: 20px;
+}
+.airpodsProPage .popup{
+gap: 10px;
+padding: 0px 10px 10px;
+width: 210px;
+  }
+
+.airpodsProPage .popup h2{
+  font-size: 16px;
+}
+.airpodsProPage .popup img{
+  width: 20px;
+}
 }
 
 @media only screen and (max-width: 425px){

@@ -48,6 +48,10 @@ margin-bottom: 20px;
   font-weight: 500;
 }
 
+.footer-inner .footer-list-one ul a{
+  text-decoration: none;
+}
+
 .footer-inner .footer-list-two ul li{
   list-style-type: none;
     font-size: 16px;

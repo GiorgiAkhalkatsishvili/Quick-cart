@@ -255,6 +255,34 @@
     justify-content: center;
     width: 100%;
   }
+
+.playStationPage .error {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.playStationPage .error h2 {
+  font-size: 16px;
+}
+
+.playStationPage .error svg {
+  width: 20px;
+}
+
+.playStationPage .popup {
+  gap: 10px;
+  padding: 0px 10px 10px;
+  width: 210px;
+}
+
+.playStationPage .popup h2 {
+  font-size: 16px;
+}
+
+.playStationPage .popup img {
+  width: 20px;
+}
 }
 
 @media only screen and (max-width: 425px) {
