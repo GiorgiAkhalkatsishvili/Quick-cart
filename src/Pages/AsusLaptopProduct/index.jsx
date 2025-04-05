@@ -35,7 +35,7 @@ const AirpodsProPage = () => {
         setShowPopup(true);
        setTimeout(() => {
         setShowPopup(false);
-      }, 2500);
+       }, 2500);
       }
   };
 
@@ -54,6 +54,7 @@ const AirpodsProPage = () => {
         setShowPopup(false);
        }, 2500);
         navigate('/cartPage');
+        window.scroll(0, 0);
       }
   };
   

@@ -12,6 +12,17 @@ const CartPage = () => {
     dispatch(removeProduct(id));
   }
 
+  const calculateTotalPrice = () => {
+    return cartItems.reduce((total, item) => {
+      const price = parseFloat(item.price);
+      const quantity = parseInt(item.quantity, 10);
+      if (isNaN(price) || isNaN(quantity)) {
+        return total;
+      }
+      return total + (price + quantity);
+    }, 0).toFixed(2);
+  };
+
 
   return (
     <div className='cartPage'>
@@ -44,7 +55,7 @@ const CartPage = () => {
                 <div className="displayed-product-details">
                 <li>{item.price}</li>
               <li>{item.quantity}</li>
-              <li>{(item.price * item.quantity).toFixed(2)}</li>
+              <li>{(item.price)}</li>
               </div>
             </ul>
           ))}
@@ -73,12 +84,12 @@ const CartPage = () => {
           </div>
           <div className="summaray-list">
             <ul>
-              <li>Price</li>
+              <li>Price ${calculateTotalPrice()}</li>
               <li>Shipping Fee</li>
             </ul>
           </div>
           <div className="total-price">
-            <p>Total</p>
+            <p>Total ${calculateTotalPrice()}</p>
           </div>
         </div>
         <div className="final-payment-btn">

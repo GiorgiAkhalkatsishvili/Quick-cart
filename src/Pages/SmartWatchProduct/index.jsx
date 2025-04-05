@@ -53,7 +53,8 @@ const buyProduct = () => {
       setTimeout(() => {
      setShowPopup(false);
       }, 2500);
-    navigate('/cartPage')
+          navigate('/cartPage');
+    window.scroll(0, 0);
         }
   };
 

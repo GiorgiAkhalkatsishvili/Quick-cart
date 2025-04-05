@@ -416,6 +416,29 @@ max-width: 50px;
 width: 100%;
 }
 
+.personal-account-tab .log-out-option{
+margin-right: 20px;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.personal-account-tab .log-out-option button{
+  margin-top: 20px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #ea580c;
+  color: #fff;
+  border: solid 1px #ea580c;
+  transition: .4s ease;
+}
+
+.personal-account-tab .log-out-option button:hover{
+background-color: #c04706;
+border-color: #c04706;
+}
+
 @media only screen and (max-width: 1200px){
   .headerComponent .header-inner{
     padding: 20px 80px 15px 80px;
