@@ -204,6 +204,7 @@ padding-bottom: 10px;
 .cartPage .second-summaray-container .inner .summaray-list{
   border-bottom: solid 1px #4b5563;
   padding-bottom: 20px;
+  margin-right: 20px;
 }
 
 .cartPage .second-summaray-container .inner .summaray-list ul{
@@ -213,11 +214,29 @@ padding-bottom: 10px;
   margin-top: 30px;
 }
 
-.cartPage .second-summaray-container .inner .summaray-list ul li{
+.cartPage .second-summaray-container .inner .summaray-list ul p{
   list-style-type: none;
   color: #4b5563;
   font-weight: 500;
   font-size: 18px;
+}
+
+.cartPage .second-summaray-container .inner .summaray-list .price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartPage .second-summaray-container .inner .summaray-list .shipping{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.cartPage .inner .total-price{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 
 .cartPage .inner .total-price p{
@@ -225,6 +244,7 @@ padding-bottom: 10px;
     font-weight: 600;
     font-size: 25px;
     margin-top: 10px;
+    
 }
 
 .cartPage .second-summaray-container .final-payment-btn{

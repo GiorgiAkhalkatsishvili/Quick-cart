@@ -8,7 +8,9 @@ import asusLaptopImg from '../assets/asusLaptop.webp'
 import watchImg from '../assets/watch.webp';
 import secondAirpodsImg from '../assets/secondAirpods.webp'
 import projectorImg from '../assets/projector.webp'
-import secondHeadPhonesImg from '../assets/headPhones.webp'
+import secondHeadPhonesImg from '../assets/headPhones.webp';
+
+
 const productsSlice = createSlice({
   name: 'products',
   initialState: {

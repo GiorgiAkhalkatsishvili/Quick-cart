@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CartPage.css';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,16 +12,14 @@ const CartPage = () => {
     dispatch(removeProduct(id));
   }
 
-  const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => {
-      const price = parseFloat(item.price);
-      const quantity = parseInt(item.quantity, 10);
-      if (isNaN(price) || isNaN(quantity)) {
-        return total;
-      }
-      return total + (price + quantity);
-    }, 0).toFixed(2);
-  };
+
+  const totalPrice = cartItems.reduce((total, item) => {
+  const price = Number(item.price.replace('$', '')) || 0;
+  const quantity = Number(item.quantity || 1);
+  return total + (price * quantity);
+}, 0);
+  
+  const roundedTotalPrice = Math.round(totalPrice * 100) / 100;
 
 
   return (
@@ -84,12 +82,19 @@ const CartPage = () => {
           </div>
           <div className="summaray-list">
             <ul>
-              <li>Price ${calculateTotalPrice()}</li>
-              <li>Shipping Fee</li>
+              <div className="price">
+                <p>Price</p>
+                <p>${roundedTotalPrice}</p>
+              </div>
+              <div className="shipping">
+                <p>Shipping Fee</p>
+                <p>$00</p>
+              </div>
             </ul>
           </div>
           <div className="total-price">
-            <p>Total ${calculateTotalPrice()}</p>
+            <p>Total</p>
+            <p>${roundedTotalPrice}</p>
           </div>
         </div>
         <div className="final-payment-btn">

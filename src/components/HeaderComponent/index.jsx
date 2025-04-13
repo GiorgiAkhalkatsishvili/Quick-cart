@@ -28,6 +28,24 @@ const HeaderComponent = () => {
   };
 
 
+  useEffect(() => {
+  const handleClickOutsideSidebar = (event) => {
+    if (sidebarMenuRef.current && !sidebarMenuRef.current.contains(event.target)) {
+      setSidebar(false);
+    }
+  };
+
+  if (sidebar) {
+    document.addEventListener('mousedown', handleClickOutsideSidebar);
+  } else {
+    document.removeEventListener('mousedown', handleClickOutsideSidebar);
+  }
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutsideSidebar);
+  };
+}, [sidebar]);
+
 
    const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -65,21 +83,19 @@ const HeaderComponent = () => {
       }
     };
 
-    // Add event listener for click outside
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Cleanup event listener
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   const handleManageAccountClick = () => {
-    setManageAccountOpen(true); // Open the 'Manage Account' tab
+    setManageAccountOpen(true);
   };
 
   const closeAccountTab = () => {
-    setManageAccountOpen(false); // Close the 'Manage Account' tab
+    setManageAccountOpen(false);
   };
 
   const openAccountTab = () => {
@@ -99,8 +115,8 @@ const HeaderComponent = () => {
           <ul>
             <Link to='/'><li>Home</li></Link>
             <Link to='/allProducts'><li>Shop</li></Link>
-            <Link to='/about'><li>About us</li></Link>
-            <Link to='/about'><li>Contact</li></Link>
+            <Link to='/'><li>About us</li></Link>
+            <Link to='/'><li>Contact</li></Link>
           </ul>
         </div>
          <div
@@ -120,8 +136,8 @@ const HeaderComponent = () => {
             <ul>
               <Link onClick={closeMenu} to='/'><li>Home</li></Link>
               <Link onClick={closeMenu} to='/allProducts'><li>Shop</li></Link>
-              <Link onClick={closeMenu} to='/about'><li>About us</li></Link>
-              <Link onClick={closeMenu} to='/about'><li>Contact</li></Link>
+              <Link onClick={closeMenu} to='/'><li>About us</li></Link>
+              <Link onClick={closeMenu} to='/'><li>Contact</li></Link>
             </ul>
           </div>
         </div>
