@@ -1,0 +1,222 @@
+.contactPage {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.contactPage .contact-inner .main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactPage .contact-inner .main-heading hr {
+  border: solid 1px #ea580c;
+  background-color: #ea580c;
+  width: 45px;
+  height: 2.5px;
+}
+
+.contactPage .contact-inner .main-heading span {
+  color: #6b7280;
+}
+
+.contactPage .contact-inner .main-heading h1 {
+  color: #374151;
+  font-weight: 430;
+  font-size: 30px;
+}
+
+.contact-inner .main-img-texts {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-inner .main-img-texts .main-img {
+  max-width: 450px;
+  width: 100%;
+}
+
+.contact-inner .main-img-texts .main-img img {
+  width: 100%;
+}
+
+.contact-inner .main-img-texts .main-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.contact-inner .main-img-texts .main-texts h2 {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.contact-inner .main-img-texts .main-texts p {
+  color: #6b7280;
+  font-weight: 450;
+  font-size: 18px;
+}
+
+.contact-inner .main-img-texts .main-texts button {
+  padding: 14px 30px;
+  border: solid 1px #ea580c;
+  background-color: #ea580c;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.contact-inner .main-img-texts .main-texts button:hover {
+  background-color: #c04706;
+  border: solid 1px #c04706;
+  color: #fff;
+}
+
+.contactPage .contact-form-inner {
+  margin-top: 80px;
+}
+
+.contactPage .contact-form-inner .main-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contactPage .contact-form-inner .main-heading h1 {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contactPage .contact-form-inner .main-heading p {
+  font-size: 17px;
+  font-weight: 450;
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+.contact-form-inner .main-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-form-inner .main-input form {
+  display: flex;
+  max-width: 520px;
+  width: 100%;
+}
+
+.contact-form-inner .main-input input {
+  max-width: 400px;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 17px;
+  border: solid 1px #6b7280;
+  outline: none;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.contact-form-inner .main-input input::placeholder {
+  font-size: 17px;
+}
+
+.contact-form-inner .main-input button {
+  padding: 5px 40px;
+  cursor: pointer;
+  margin-left: 0;
+  background-color: #ea580c;
+  color: #fff;
+  font-size: 17px;
+  outline: none;
+  border: solid 1px #ea580c;
+  border-radius: 0 4px 4px 0;
+  transition: .4s ease;
+}
+
+.contact-form-inner .main-input button:hover {
+  background-color: #c04706;
+}
+
+/* ✅ Updated popup and error animation */
+.contactPage .popup,
+.contactPage .error {
+  background-color: #fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -30%) scale(0.95);
+  text-align: center;
+  padding: 0 15px 15px;
+  color: #333;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contactPage .open-popup,
+.contactPage .open-error {
+  visibility: visible;
+  opacity: 1;
+  top: 13%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.contactPage .popup h2,
+.contactPage .error h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.contactPage .popup img,
+.contactPage .error svg {
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .contactPage {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .contactPage {
+    padding: 0 20px;
+  }
+
+  .contact-inner .main-img-texts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-inner .main-img-texts .main-img {
+    max-width: 100%;
+  }
+
+  .contact-inner .main-img-texts .main-texts {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    width: 100%;
+  }
+}

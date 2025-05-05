@@ -15,6 +15,8 @@ import ProjectorProduct from './Pages/ProjectorProduct';
 import HeadPhonesProduct from './Pages/HeadPhonesProduct';
 import MacbookProduct from './Pages/MacbookProduct';
 import CartPage from './Pages/CartPage';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
           <Route path='/quietHeadPhones45' element={<HeadPhonesProduct/>} />
           <Route path='/macBookPro16' element={<MacbookProduct/>} />
           <Route path='/cartPage' element={<CartPage/>} />
+          <Route path='/about' element={<AboutPage/>} />
+          <Route path='/contact' element={<ContactPage/>} />
         </Routes>
         <FooterComponent />
       </Router>

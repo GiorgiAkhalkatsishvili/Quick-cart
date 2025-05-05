@@ -115,8 +115,8 @@ const HeaderComponent = () => {
           <ul>
             <Link to='/'><li>Home</li></Link>
             <Link to='/allProducts'><li>Shop</li></Link>
-            <Link to='/'><li>About us</li></Link>
-            <Link to='/'><li>Contact</li></Link>
+            <Link to='/about'><li>About us</li></Link>
+            <Link to='/contact'><li>Contact</li></Link>
           </ul>
         </div>
          <div
@@ -136,8 +136,8 @@ const HeaderComponent = () => {
             <ul>
               <Link onClick={closeMenu} to='/'><li>Home</li></Link>
               <Link onClick={closeMenu} to='/allProducts'><li>Shop</li></Link>
-              <Link onClick={closeMenu} to='/'><li>About us</li></Link>
-              <Link onClick={closeMenu} to='/'><li>Contact</li></Link>
+              <Link onClick={closeMenu} to='/about'><li>About us</li></Link>
+              <Link onClick={closeMenu} to='/contact'><li>Contact</li></Link>
             </ul>
           </div>
         </div>

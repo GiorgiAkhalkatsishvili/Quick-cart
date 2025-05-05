@@ -1,12 +1,39 @@
 import React, { useState } from 'react'
 import './CartPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeProduct } from '../../Redux/productsSlice';
+import checkMark from '../../assets/checkMark.png';
+
 
 const CartPage = () => {
   const cartItems = useSelector((state) => state.products.cartItems);
   const dispatch = useDispatch();
+  const [message, setMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+
+  const purhcaseProducts = () => {
+    if (cartItems.length > 0) {
+    setMessage('Items purchased!');
+    setShowPopup(true);
+    setTimeout(() => {
+    cartItems.forEach(item => {
+        handleRemoveProduct(item.id);
+      });
+    navigate('/');
+    setShowPopup(false);
+    }, 1000);
+    } else {
+    setError('Your cart is empty!');
+      setShowPopup(true);
+      setTimeout(() => {
+       setShowPopup(false);
+     }, 1000);
+    }
+  }
 
   const handleRemoveProduct = (id) => {
     dispatch(removeProduct(id));
@@ -98,8 +125,23 @@ const CartPage = () => {
           </div>
         </div>
         <div className="final-payment-btn">
-          <button>Place Order</button>
+          <button onClick={purhcaseProducts}>Place Order</button>
         </div>
+    {
+      message ? (
+        <div className="notification">
+            <div className={`popup ${showPopup ? 'open-popup' : ''}`}>
+              <img src={checkMark} alt="" />
+              <h2>Items purchased!</h2>
+          </div>
+        </div>
+        ) : (
+            <div className={`error ${showPopup ? 'open-error' : ''}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" fill='red'/></svg>
+              <h2>Your cart is empty!</h2>
+          </div>
+        )
+      }
       </div>
     </div>
   )
