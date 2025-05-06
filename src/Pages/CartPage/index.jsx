@@ -26,6 +26,7 @@ const CartPage = () => {
     navigate('/');
     setShowPopup(false);
     }, 1000);
+      window.scroll(0,0)
     } else {
     setError('Your cart is empty!');
       setShowPopup(true);

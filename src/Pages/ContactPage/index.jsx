@@ -9,14 +9,16 @@ const ContactPage = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleError = () => {
-    setError('Feature is not available for now!');
-    setMessage('');
-    setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-      setError('');
-    }, 2500);
-  };
+  setError('Feature is not available for now!');
+  setMessage('');
+  setShowPopup(true);
+
+  setTimeout(() => {
+    setShowPopup(false);
+    setError('');
+  }, 2500);
+};
+
 
   return (
     <div className='contactPage'>
@@ -63,8 +65,6 @@ const ContactPage = () => {
             <button type="submit">Send</button>
           </form>
         </div>
-
-        {/* Notification Popup */}
         {
           message ? (
             <div className="notification">
