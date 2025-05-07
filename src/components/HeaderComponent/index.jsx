@@ -200,6 +200,7 @@ const HeaderComponent = () => {
               </div>
               <h3>Sign in to QuickCart Ecommerce</h3>
               <p>Welcome back! Please sign in to continue</p>
+              <p>This sign-in uses Google's secure authentication system. We do not see or store your password. This is just a test and will not access any personal data beyond your public profile</p>
             </div>
             <div className="main-sing-in-button">
               <GoogleLogin
