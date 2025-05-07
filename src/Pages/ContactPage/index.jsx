@@ -2,22 +2,28 @@ import React, { useState } from 'react';
 import './ContactPage.css';
 import contactImg from '../../assets/contact-img.png';
 import checkMark from '../../assets/checkMark.png';
+import warningImg from '../../assets/warning.jpg'
 
 const ContactPage = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleError = () => {
-  setError('Feature is not available for now!');
-  setMessage('');
-  setShowPopup(true);
-
-  setTimeout(() => {
-    setShowPopup(false);
-    setError('');
-  }, 2500);
-};
+  const addProductToCart = () => {
+        if (message) {
+          setError('You need to log in first!');
+          setShowPopup(true);
+          setTimeout(() => {
+          setShowPopup(false);
+        }, 2500);
+        } else {
+          setMessage('Feature is not available yet!');
+          setShowPopup(true);
+         setTimeout(() => {
+          setShowPopup(false);
+         }, 2500);
+        }
+    };
 
 
   return (
@@ -39,7 +45,7 @@ const ContactPage = () => {
               <p>54709 Willms Station<br/>Suite 350, Washington, USA</p>
             </div>
             <div className="contact-text">
-              <p>Tel: (415) 555-0132<br/>Email: admin@forever.com</p>
+              <p>Tel: (123) 456-7890<br/>Email: georgeakhalkatsishvili748@gmail.com</p>
             </div>
             <div className="second-heading">
               <h2>Careers at Forever</h2>
@@ -48,7 +54,7 @@ const ContactPage = () => {
               <p>Learn more about our teams and job openings.</p>
             </div>
             <div className="contact-btn">
-              <button onClick={handleError}>Explore Jobs</button>
+              <button onClick={addProductToCart}>Explore Jobs</button>
             </div>
           </div>
         </div>
@@ -66,24 +72,17 @@ const ContactPage = () => {
           </form>
         </div>
         {
-          message ? (
-            <div className="notification">
-              <div className={`popup ${showPopup ? 'open-popup' : ''}`}>
-                <img src={checkMark} alt="Success" />
-                <h2>{message}</h2>
-              </div>
-            </div>
-          ) : (
-            error && (
-              <div className={`error ${showPopup ? 'open-error' : ''}`}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" fill="red" />
-                </svg>
-                <h2>{error}</h2>
-              </div>
-            )
-          )
-        }
+      message ? (
+        <div className="notification">
+            <div className={`popup ${showPopup ? 'open-popup' : ''}`}>
+              <img src={warningImg} alt="" />
+              <h2>Feature is not available yet!</h2>
+          </div>
+        </div>
+        ) : (
+          ''
+        )
+      }
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react'
 import './AboutPage.css';
-import aboutImg from '../../assets/aboutImg.png'
+import electronicsImg from '../../assets/another.avif';
+
 
 const AboutPage = () => {
   return (
@@ -12,7 +13,7 @@ const AboutPage = () => {
         </div>
         <div className="main-img-texts">
           <div className="main-img">
-            <img src={aboutImg} alt="" />
+            <img src={electronicsImg} alt="" />
           </div>
           <div className="main-info-text">
             <div className="first-container">
@@ -25,7 +26,7 @@ const AboutPage = () => {
               <h3>Our Mission</h3>
             </div>
             <div className="third-container">
-              <p>Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
+              <p>Our mission at Quick-cart is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
             </div>
           </div>
         </div>
