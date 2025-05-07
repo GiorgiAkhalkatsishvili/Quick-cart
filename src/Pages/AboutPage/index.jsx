@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutPage.css';
-import electronicsImg from '../../assets/another.avif';
+import electronicsImg from '../../assets/electronicsPhoto.avif';
 
 
 const AboutPage = () => {
